@@ -53,6 +53,7 @@ syn region dbmlSettingBlock start="\[" end="\]" fold transparent contains=dbmlBo
 
 if !exists('g:dbml_nofold_blocks')
     syn region dbmlBlock start=/{/ end=/}/ fold transparent
+endif
 
 " Define the default highlighting.
 hi def link dbmlBlock       Block
