@@ -1,0 +1,33 @@
+*dbml.txt*  A Database Markup Lanuage (DBML) syntax plugin for Vim
+
+Language:             Database Markup Language (DBML) https://dbml-lang.org
+Maintainer:           Clinton James
+Project Repository:   https://github/jidn/vim-dbml
+Version:              1.0
+License:              Apache 2.0
+
+INTRODUCTION                                                    *dbml-syntax*
+
+This plugin provides Vim syntax and filetype detection for Database Markup
+Language to define and document database schemas and structures.
+
+
+ABOUT                                                           *dbml-about*
+
+Grab the latest version or report a bug on GitHub:
+
+https://github.com/jidn/vim-dbml
+
+
+FOLDING                                                         *dbml-folding*
+
+The dbml syntax file provides syntax folding (see |:syn-fold|) for Table and
+Index blocks.
+
+When 'foldmethod' is set to "syntax" then function script blocks will be
+folded unless you use the following in your .vimrc or before opening a script: >
+
+    :let g:dbml_nofold_blocks = 1
+<
+------------------------------------------------------------------------------
+ vim:ft=help:
