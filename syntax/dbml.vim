@@ -17,9 +17,9 @@ endif
 
 syn keyword dbmlKeyword Table Enum Indexes
 syn keyword dbmlBoolean false null true
-syn keyword dbmlType  blob boolean char character date datetime decimal
+syn keyword dbmlType  blob bool boolean char character date datetime decimal
 syn keyword dbmlType  float json int integer long number numeric rowid
-syn keyword dbmlType  smallint real timestamp varchar
+syn keyword dbmlType  smallint real text timestamp varchar
 syn match dbmlType "int\(8\|16\|32\|64\|128\)"
 
 " DBML Ref:
