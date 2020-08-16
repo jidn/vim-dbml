@@ -21,6 +21,9 @@ syn keyword dbmlType  blob bool boolean char character date datetime decimal
 syn keyword dbmlType  float json int integer long number numeric rowid
 syn keyword dbmlType  smallint real text timestamp varchar
 syn match dbmlType "int\(8\|16\|32\|64\|128\)"
+syn keyword dbmlColSetting pk unique increment
+syn match dbmlColSetting "primary key"
+syn match dbmlColSetting "not null"
 
 " DBML Ref:
 syn match dbmlRef "[rR]ef:" nextgroup=dbmlRefOp,dbmlRefName skipwhite
@@ -47,7 +50,7 @@ syn match dbmlFloat "[-+]\d\+.\d*"
 syn match dbmlComment "//.*$" contains=@Spell
 
 " Bracketed Settings
-syn region dbmlSettingBlock start="\[" end="\]" fold transparent contains=dbmlBoolean,dbmlNumber,dbmlFloat,dbmlString,dbmlExpression,dbmlNote,dbmlRef
+syn region dbmlSettingBlock start="\[" end="\]" fold transparent contains=dbmlBoolean,dbmlNumber,dbmlFloat,dbmlString,dbmlExpression,dbmlNote,dbmlRef,dbmlColSetting
 
 " Folding
 
@@ -58,8 +61,9 @@ endif
 " Define the default highlighting.
 hi def link dbmlBlock       Block
 hi def link dbmlComment     Comment
-hi def link dbmlKeyword     Statement
+hi def link dbmlKeyword     Keyword
 hi def link dbmlColString   Statement
+hi def link dbmlColSetting  Statement
 hi def link dbmlType        Type
 hi def link dbmlBoolean     Boolean
 hi def link dbmlNumber      Number
