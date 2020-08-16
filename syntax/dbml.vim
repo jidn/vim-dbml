@@ -15,7 +15,7 @@ elseif exists("b:current_syntax")
     finish
 endif
 
-syn keyword dbmlKeyword Table Enum Indexes
+syn keyword dbmlKeyword Table Enum Indexes Project
 syn keyword dbmlBoolean false null true
 syn keyword dbmlType  blob bool boolean char character date datetime decimal
 syn keyword dbmlType  float json int integer long number numeric rowid
