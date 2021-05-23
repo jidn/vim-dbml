@@ -40,11 +40,11 @@ syn region dbmlColString start=/"/ skip=/\\"/ end=/"/ oneline
 syn region dbmlString start=/'/ skip=/\\'/ end=/'/ oneline
 syn region dbmlExpression start=/`/ end=/`/ oneline
 
-" Numbers:
+" Numbers
 syn match dbmlNumber "\d\+"
 syn match dbmlNumber "[-+]\d\+"
-syn match dbmlFloat "\d\+.\d*"
-syn match dbmlFloat "[-+]\d\+.\d*"
+syn match dbmlFloat "\d\+\.\d*"
+syn match dbmlFloat "[-+]\d\+\.\d*"
 
 " Comments:
 syn match dbmlComment "//.*$" contains=@Spell
