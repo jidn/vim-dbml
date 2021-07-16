@@ -1,3 +1,8 @@
+Project project_name {
+  database_type: 'PostgreSQL'
+  Note: 'Description of the project'
+}
+
 Table products {
   id int [pk, increment]
   location int [ref: > locations.id]
@@ -8,10 +13,18 @@ Table products {
 Table orders {
   id int [pk]
   users_id int [not null, unique]
+  cost decimal [default: 123.45]
+  Note: 'Single line note'
   Note: '''
     This is a note across
     multiple lines
   '''
+  Note: {
+    'Note within braces.'
+  }
+  indexes {
+    (id, users_id) [pk]  // composite primary key
+  }
 }
 
 TableGroup ecommerce1 {

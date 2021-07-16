@@ -34,20 +34,20 @@ syn match dbmlRefOp "\(<\|>\|-\)" nextgroup=dbmlRefName skipwhite
 syn match dbmlRefName "\h\w*\.\h\w*"
 
 " DBML Note:
-syn match dbmlNoteMulti "[nN]ote:" contained nextgroup=dbmlNoteText,dbmlMultiLine skipwhite
-syn match dbmlNote "[nN]ote:" contained nextgroup=dbmlNoteText skipwhite
+syn match dbmlNote "[nN]ote:" nextgroup=dbmlNoteBrace,dbmlNoteText,dbmlMultiLine skipwhite
 syn region dbmlNoteText start=/'/ end=/'/ oneline
+syn region dbmlNoteBrace start=/{/ end=/}/ fold contained
+syn region dbmlMultiLine start=/'''/ end=/'''/ fold
 
 " Various Regions
 syn region dbmlColString start=/"/ skip=/\\"/ end=/"/ oneline
 syn region dbmlString start=/'/ skip=/\\'/ end=/'/ oneline
 syn region dbmlExpression start=/`/ end=/`/ oneline
-syn region dbmlMultiLine start=/'''/ end=/'''/ fold
 
 " Numbers
-syn match dbmlNumber "\d\+"
+syn match dbmlNumber "\<\d\+"
 syn match dbmlNumber "[-+]\d\+"
-syn match dbmlFloat "\d\+\.\d*"
+syn match dbmlFloat "\<\d\+\.\d*"
 syn match dbmlFloat "[-+]\d\+\.\d*"
 
 " Comments
@@ -75,8 +75,8 @@ hi def link dbmlColString   Statement
 hi def link dbmlColSetting  Statement
 hi def link dbmlExpression  Function
 hi def link dbmlMultiLine   SpecialComment
-hi def link dbmlNoteMulti   SpecialComment
 hi def link dbmlNote        SpecialComment
+hi def link dbmlNoteBrace   SpecialComment
 hi def link dbmlNoteText    SpecialComment
 hi def link dbmlDefault     Macro
 hi def link dbmlRef         Macro
