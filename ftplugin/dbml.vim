@@ -1,5 +1,5 @@
 " Vim filetype plugin file
-" Language:             Database Markup Language (DBML) https://dbml-lang.org
+" Language:             Database Markup Language (DBML) https://dbml.org
 " Maintainer:           Clinton James
 " Project Repository:   https://github/jidn/vim-dbml
 

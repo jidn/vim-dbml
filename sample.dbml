@@ -4,14 +4,19 @@ Project project_name {
 }
 
 Table products {
+  [headercolor: #3498db]
   id int [pk, increment]
   location int [ref: > locations.id]
   active int [Default: 1]
   name varchar [Note: 'a note']
+  "multi word" string
+
+  indexes {
+    (id, active) [type: btree, name: 'available']
 }
 
-Table orders {
-  id int [pk]
+Table orders as alias {
+  id int
   users_id int [not null, unique]
   cost decimal [default: 123.45]
   Note: 'Single line note'

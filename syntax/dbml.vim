@@ -1,9 +1,9 @@
 " Vim syntax file
-" Language:             Database Markup Language (DBML) https://dbml-lang.org
+" Language:             Database Markup Language (DBML) https://dbml.org
 " Maintainer:           Clinton James
 " Project Repository:   https://github/jidn/vim-dbml
-" Last Change:          2019-09-01
-" Version:              1.0
+" Last Change:          2021-07-15
+" Version:              1.1
 "
 " The following settings are available for tuning sytax highlighting:
 "   let dbml_nofold_blocks = 1
