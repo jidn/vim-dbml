@@ -2,7 +2,7 @@
 " Language:             Database Markup Language (DBML) https://dbml.org
 " Maintainer:           Clinton James
 " Project Repository:   https://github/jidn/vim-dbml
-" Last Change:          2021-07-15
+" Last Change:          2022-12-17
 " Version:              1.1
 "
 " The following settings are available for tuning sytax highlighting:
@@ -15,6 +15,7 @@ elseif exists("b:current_syntax")
     finish
 endif
 
+syn case ignore
 syn keyword dbmlKeyword Table TableGroup Enum Indexes Project
 syn keyword dbmlBoolean false null true
 syn keyword dbmlType  blob bool boolean char character date datetime decimal
